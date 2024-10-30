@@ -1,0 +1,31 @@
+# .github/workflows/pr-check.yml
+name: Pull Request Status Check
+
+# Trigger this workflow on PR events
+on:
+  pull_request:
+    branches:
+      - main  # Specify the branch you want the check to run against
+
+jobs:
+  status-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Add any additional steps for your status check here
+      # For example, you can run tests, linters, etc.
+
+      - name: Run tests
+        run: |
+          echo "Running tests..."
+          # Your test commands here (e.g., `npm test`, `pytest`, etc.)
+          exit 0  # Simulate success, replace with actual command
+
+      - name: Lint code
+        run: |
+          echo "Linting code..."
+          # Your linting commands here (e.g., `eslint`, `flake8`, etc.)
+          exit 0  # Simulate success, replace with actual command
