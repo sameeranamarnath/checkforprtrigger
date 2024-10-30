@@ -22,6 +22,6 @@ jobs:
         run: |
           echo "Running tests..."
           # Your test commands here (e.g., `npm test`, `pytest`, etc.)
-          exit -1  # Simulate success, replace with actual command
+          exit 1  # Simulate success, replace with actual command
 
    
