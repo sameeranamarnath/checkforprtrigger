@@ -19,8 +19,13 @@ jobs:
       # For example, you can run tests, linters, etc.
 
       - name: Run tests
+        env:
+          SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
+          TARGET_BRANCH: ${{ github.event.pull_request.base.ref }}
         run: |
           echo "Running tests..."
+          echo  "${SOURCE_BRANCH}"
+          echo  "${TARGET_BRANCH}"
           # Your test commands here (e.g., `npm test`, `pytest`, etc.)
           exit 1  # Simulate success, replace with actual command
 
