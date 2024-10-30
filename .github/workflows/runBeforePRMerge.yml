@@ -22,10 +22,6 @@ jobs:
         run: |
           echo "Running tests..."
           # Your test commands here (e.g., `npm test`, `pytest`, etc.)
-          exit 0  # Simulate success, replace with actual command
+          exit -1  # Simulate success, replace with actual command
 
-      - name: Lint code
-        run: |
-          echo "Linting code..."
-          # Your linting commands here (e.g., `eslint`, `flake8`, etc.)
-          exit 0  # Simulate success, replace with actual command
+   
